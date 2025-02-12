@@ -21,9 +21,9 @@ def upload_file():
     df = pd.read_csv(operational)
     def categorize_split(row):
         if row['Vehicle Size'] == 40:
-            result = (row['Distance\n(mi)'] * 2.08) / 525 * 0.7
+            result = (row['Distance\n(mi)'] * 2.08) / (525 * 0.7)
         elif row['Vehicle Size'] == 60:
-            result = (row['Distance\n(mi)'] * 2.9) / 525 * 0.7
+            result = (row['Distance\n(mi)'] * 2.9) / (525 * 0.7)
         else:
             return "Unknown"  # Others mark as Unknown
 
